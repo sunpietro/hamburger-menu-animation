@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hamburger animation</title>
+  <style>
+    .hamburger {
+      background: #f00;
+      cursor: pointer;
+      display: block;
+      padding: 9px;
+      position: relative;
+      width: 18px;
+      height: 14px;
+    }
+    .hamburger .hm {
+      display: block;
+      background: #fff;
+      border-radius: 3px;
+      height: 3px;
+      width: 19px;
+      position: absolute;
+      left: 9px;
+      opacity: 1;
+    }
+    .hamburger .hm-1 {
+      top: 9px;
+      -webkit-transition: transform .5s, top .5s .5s;
+      transition: transform .5s, top .5s .5s;
+    }
+    .hamburger .hm-2 {
+      top: 15px;
+      -webkit-transition: opacity .5s ease-out;
+      transition: opacity .5s ease-out;
+    }
+    .hamburger .hm-3 {
+      top: 21px;
+      -webkit-transition: transform .5s, top .5s .5s;
+      transition: transform .5s, top .5s .5s;
+    }
+    .hamburger:hover .hm-1 {
+      transform: rotate(45deg);
+      -webkit-transition: top .5s, transform .5s .5s;
+      transition: top .5s, transform .5s .5s;
+    }
+    .hamburger:hover .hm-1, .hamburger:hover .hm-3 {
+      top: 15px;
+    }
+    .hamburger:hover .hm-3 {
+      transform: rotate(-45deg);
+      -webkit-transition: top .5s, transform .5s .5s;
+      transition: top .5s, transform .5s .5s;
+    }
+    .hamburger:hover .hm-2 {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <a class="hamburger">
+    <span class="hm hm-1"></span>
+    <span class="hm hm-2"></span>
+    <span class="hm hm-3"></span>
+  </a>
+</body>
+</html>
